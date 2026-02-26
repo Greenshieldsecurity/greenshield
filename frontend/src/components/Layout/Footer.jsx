@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-top">
           <a href="/" className="footer-logo-link">
-            <img src="/logo.png" alt="Green Shield Consultancy" className="footer-logo" />
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Green Shield Consultancy" className="footer-logo" />
           </a>
           <nav className="footer-nav" aria-label="Footer navigation">
             <ul className="footer-nav-list">

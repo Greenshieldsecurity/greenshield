@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <a href="/" className="navbar-logo-link">
-          <img src="/logo.png" alt="Green Shield Consultancy" className="navbar-logo" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Green Shield Consultancy" className="navbar-logo" />
         </a>
 
         <div className="navbar-right">
