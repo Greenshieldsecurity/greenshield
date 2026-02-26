@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const LockIcon = () => (
   <svg className="hero-cta-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
@@ -95,14 +97,14 @@ function Hero() {
           With over 25 years of security industry experience, Green Shield Consultancy provides trusted keyholding, alarm response and security surveys — delivering rapid, reliable protection during high-risk periods and beyond.
         </p>
         <div className="hero-ctas">
-          <a href="/request" className="hero-cta-primary">
+          <Link to="/request" className="hero-cta-primary">
             <LockIcon />
             Request a Security Survey
-          </a>
-          <a href="/request" className="hero-cta-secondary">
+          </Link>
+          <Link to="/request" className="hero-cta-secondary">
             <PhoneIcon />
             Speak to a Security Consultant
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -11,6 +11,8 @@ const PhoneIcon = () => (
   </svg>
 );
 
+import { Link } from 'react-router-dom';
+
 export default function ServiceHero({ micro, headline, subheadline, showCtas = true }) {
   return (
     <section className="hero service-page-hero" aria-labelledby="service-hero-heading">
@@ -27,14 +29,14 @@ export default function ServiceHero({ micro, headline, subheadline, showCtas = t
         )}
         {showCtas && (
           <div className="hero-ctas">
-            <a href="/request" className="hero-cta-primary">
+            <Link to="/request" className="hero-cta-primary">
               <LockIcon />
               Request a security survey
-            </a>
-            <a href="/request" className="hero-cta-secondary">
+            </Link>
+            <Link to="/request" className="hero-cta-secondary">
               <PhoneIcon />
               Speak to a consultant
-            </a>
+            </Link>
           </div>
         )}
       </div>

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function CtaBanner() {
   return (
     <section className="cta-banner" aria-labelledby="cta-banner-heading">
@@ -11,13 +13,13 @@ export default function CtaBanner() {
           Criminals look for the path of least resistance. Secure your premises with a professional security survey and tailored keyholding or alarm response — so your business isn’t the one they choose.
         </p>
         <div className="cta-banner-actions">
-          <a href="/request" className="cta-banner-btn cta-banner-btn-primary">
+          <Link to="/request" className="cta-banner-btn cta-banner-btn-primary">
             Request a Security Survey
             <span className="cta-banner-btn-arrow" aria-hidden="true">→</span>
-          </a>
-          <a href="/request" className="cta-banner-btn cta-banner-btn-secondary">
+          </Link>
+          <Link to="/request" className="cta-banner-btn cta-banner-btn-secondary">
             Speak to a Consultant
-          </a>
+          </Link>
         </div>
       </div>
     </section>

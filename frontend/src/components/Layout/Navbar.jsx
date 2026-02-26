@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { NAV_LINKS } from '../../config/nav';
 
 export default function Navbar() {
@@ -21,9 +22,9 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a href="/request" className="navbar-cta" onClick={() => setMenuOpen(false)}>
+          <Link to="/request" className="navbar-cta" onClick={() => setMenuOpen(false)}>
             Request Security Services
-          </a>
+          </Link>
         </div>
 
         <button
@@ -67,9 +68,9 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <a href="/request" className="navbar-drawer-cta" onClick={() => setMenuOpen(false)}>
+        <Link to="/request" className="navbar-drawer-cta" onClick={() => setMenuOpen(false)}>
           Request Security Services
-        </a>
+        </Link>
       </div>
     </nav>
   );

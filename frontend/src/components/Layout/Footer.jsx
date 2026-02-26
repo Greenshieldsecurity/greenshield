@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { NAV_LINKS } from '../../config/nav';
 
 export default function Footer() {
@@ -19,7 +20,7 @@ export default function Footer() {
               ))}
             </ul>
           </nav>
-          <a href="/request" className="footer-cta">Request Security Services</a>
+          <Link to="/request" className="footer-cta">Request Security Services</Link>
         </div>
         <div className="footer-bottom">
           <p className="footer-copy">

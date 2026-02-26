@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function CtaStrip() {
   return (
     <section className="cta-strip" aria-labelledby="cta-strip-heading">
@@ -10,9 +12,9 @@ export default function CtaStrip() {
           Get in touch for a no-obligation conversation about keyholding, alarm response, or a full security survey.
         </p>
         <div className="cta-strip-actions">
-          <a href="/request" className="cta-strip-btn cta-strip-btn-primary">
+          <Link to="/request" className="cta-strip-btn cta-strip-btn-primary">
             Request a Security Survey
-          </a>
+          </Link>
           <a href="tel:+440000000000" className="cta-strip-btn cta-strip-btn-secondary">
             Call Us Now
           </a>
