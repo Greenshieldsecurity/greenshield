@@ -8,17 +8,23 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        <a href="/" className="navbar-logo-link">
+        <Link to="/" className="navbar-logo-link">
           <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Green Shield Consultancy" className="navbar-logo" />
-        </a>
+        </Link>
 
         <div className="navbar-right">
           <ul className="navbar-links">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="navbar-link" onClick={() => setMenuOpen(false)}>
-                  {link.label}
-                </a>
+                {link.href === '/' ? (
+                  <Link to="/" className="navbar-link" onClick={() => setMenuOpen(false)}>
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a href={link.href} className="navbar-link" onClick={() => setMenuOpen(false)}>
+                    {link.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -62,9 +68,15 @@ export default function Navbar() {
         <ul className="navbar-drawer-links">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="navbar-drawer-link" onClick={() => setMenuOpen(false)}>
-                {link.label}
-              </a>
+              {link.href === '/' ? (
+                <Link to="/" className="navbar-drawer-link" onClick={() => setMenuOpen(false)}>
+                  {link.label}
+                </Link>
+              ) : (
+                <a href={link.href} className="navbar-drawer-link" onClick={() => setMenuOpen(false)}>
+                  {link.label}
+                </a>
+              )}
             </li>
           ))}
         </ul>

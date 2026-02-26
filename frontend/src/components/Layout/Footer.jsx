@@ -8,14 +8,18 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-top">
-          <a href="/" className="footer-logo-link">
+          <Link to="/" className="footer-logo-link">
             <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Green Shield Consultancy" className="footer-logo" />
-          </a>
+          </Link>
           <nav className="footer-nav" aria-label="Footer navigation">
             <ul className="footer-nav-list">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="footer-nav-link">{link.label}</a>
+                  {link.href === '/' ? (
+                    <Link to="/" className="footer-nav-link">{link.label}</Link>
+                  ) : (
+                    <a href={link.href} className="footer-nav-link">{link.label}</a>
+                  )}
                 </li>
               ))}
             </ul>
