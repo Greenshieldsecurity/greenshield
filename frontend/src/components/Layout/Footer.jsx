@@ -1,0 +1,32 @@
+import { NAV_LINKS } from '../../config/nav';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="footer">
+      <div className="footer-inner">
+        <div className="footer-top">
+          <a href="/" className="footer-logo-link">
+            <img src="/logo.png" alt="Green Shield Consultancy" className="footer-logo" />
+          </a>
+          <nav className="footer-nav" aria-label="Footer navigation">
+            <ul className="footer-nav-list">
+              {NAV_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="footer-nav-link">{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <a href="/request" className="footer-cta">Request Security Services</a>
+        </div>
+        <div className="footer-bottom">
+          <p className="footer-copy">
+            © {currentYear} Green Shield Consultancy. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}

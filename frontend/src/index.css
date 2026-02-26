@@ -1,0 +1,96 @@
+/* Base / reset & CSS variables */
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Typography */
+  --font-heading: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Brand */
+  --color-primary: #178a6b;
+  --color-primary-hover: #0f5c4c;
+  --color-trust-bar: #0f5c4c;
+  --color-trust-icon: #c8d0d2;
+  --hero-overlay-start: rgba(15, 92, 76, 0.88);
+  --hero-overlay-end: rgba(8, 45, 38, 0.92);
+  /* Replace with your own dusk/night commercial property image if desired */
+  --hero-bg-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920');
+}
+
+/* Headings: Montserrat (authority) */
+h1, h2, h3, h4, h5, h6,
+.hero-headline,
+.hero-micro,
+.navbar-drawer-title,
+.services-headline,
+.services-label,
+.services-card-title,
+.authority-label,
+.authority-headline,
+.authority-pillar-title,
+.integrity-headline,
+.integrity-block-title,
+.cta-banner-label,
+.cta-banner-headline,
+.cta-strip-headline,
+.contact-headline,
+.contact-info-label,
+.contact-label,
+.faq-headline,
+.faq-question,
+.service-image-copy-heading,
+.service-features-heading,
+.service-feature-card-title,
+.request-modal-title,
+.request-page-title,
+.request-step-label,
+.request-success-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.hero-headline,
+.services-headline,
+.authority-headline,
+.cta-banner-headline,
+.cta-strip-headline,
+.integrity-headline,
+.request-modal-title,
+.request-page-title,
+.request-success-title {
+  font-weight: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
