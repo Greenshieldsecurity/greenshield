@@ -30,7 +30,7 @@ jobs:
         run: |
           cd frontend
           npm ci
-          npm run build
+          VITE_BASE_URL=/greenshield/ npm run build
 
       - name: Copy index.html to 404.html for SPA routing
         run: cp frontend/dist/index.html frontend/dist/404.html

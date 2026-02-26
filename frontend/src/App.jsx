@@ -6,7 +6,7 @@ import ServicePage from './pages/ServicePage'
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={import.meta.env.BASE_URL?.replace(/\/$/, '') ?? ''}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/request" element={<RequestPage />} />
